@@ -1,0 +1,95 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f3758f8f58fdef43803eb9be1df0608, type: 3}
+  m_Name: PhotonServerSettings
+  m_EditorClassIdentifier: 
+  AppSettings:
+    AppIdRealtime: 9db8a6f4-3772-4074-8164-5af693dbee93
+    AppIdFusion: 
+    AppIdChat: aaf5544e-33f5-45e8-bc52-e9f8d499dfc3
+    AppIdVoice: 2611e26c-5f8b-4e29-9f79-930feecc9c6a
+    AppVersion: 
+    UseNameServer: 1
+    FixedRegion: 
+    Server: 
+    Port: 0
+    ProxyServer: 
+    Protocol: 0
+    EnableProtocolFallback: 1
+    AuthMode: 0
+    EnableLobbyStatistics: 0
+    NetworkLogging: 1
+  DevRegion: sa
+  PunLogging: 0
+  EnableSupportLogger: 0
+  RunInBackground: 1
+  StartInOfflineMode: 0
+  RpcList:
+  - ClickRpc
+  - DestroyRpc
+  - DestroySpaceship
+  - Fire
+  - RespawnSpaceship
+  - CreatePlayer
+  - Skill1
+  - Skill2
+  - Skill3
+  - Skill4
+  - ClonGhostForm
+  - ClonGhostFormEnd
+  - GhostFormEnd
+  - GhostFormStart
+  - SetPlayerOnTeamA
+  - SetPlayerOnTeamB
+  - SetPlayerOnWaitTeam
+  - SynchroTeamA
+  - SynchroTeamB
+  - SynchroWaitTeam
+  - TeamWaitUpdate
+  - TeamAUpdate
+  - TeamBUpdate
+  - PlayerCheck
+  - StartGamePlay
+  - CreateCharacter_Request
+  - Hooked
+  - CatchedByNet
+  - Skill
+  - SkillingHook
+  - SkillingNet
+  - ShiftBehaviour
+  - RegisterCharacter
+  - CharacterDie
+  - UpdateView
+  - CharacterDie_Request
+  - Win
+  - SetNickNameOnNet
+  - GetGoldForKill
+  - GoldToKiller
+  - CantHearYou
+  - ChangeColour
+  - HeresWhy
+  - UpdateNickNames
+  - UpdatePlayerList_Request
+  - Die
+  - ServerDie
+  - ServerRespawn
+  - BackToNormality
+  - HookedMove
+  - ServerCatched
+  - RemoveCharacterFromHook
+  - HookedByAly
+  - HookedByEnemy
+  - ServerNormal
+  - ServerShift
+  DisableAutoOpenWizard: 1
+  ShowSettings: 0
+  DevRegionSetOnce: 1
