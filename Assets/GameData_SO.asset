@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b184a9310174ac42b32a94b76b30734, type: 3}
   m_Name: GameData_SO
   m_EditorClassIdentifier: 
-  MaxPlayersTeamA: 0
-  MaxPlayersTeamB: 1
+  MaxPlayersTeamA: 1
+  MaxPlayersTeamB: 0
