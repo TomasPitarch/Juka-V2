@@ -1,12 +1,11 @@
 ﻿using System;
 using System.Threading.Tasks;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 using Photon.Voice.Unity;
 using Photon.Voice.PUN;
 using Photon.Realtime;
+
 
 public class C : MonoBehaviourPunCallbacks
 {
