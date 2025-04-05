@@ -31,7 +31,8 @@ public class LoginView : ScreenUI
     }
 
     private bool NickNameValidator(string text)
-    {
+    { 
+        //TODO:Implements the complete validation logic
         return true;
         if ((!string.IsNullOrEmpty(text) && !string.IsNullOrWhiteSpace(text)))
         {
@@ -51,6 +52,11 @@ public class LoginView : ScreenUI
     public void DisableConnectButton()
     {
         connectButton.interactable = true;
+    }
+    
+    public string GetNickName()
+    {
+        return textNickName.text;
     }
     
 }
