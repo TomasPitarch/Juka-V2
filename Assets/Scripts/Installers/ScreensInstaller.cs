@@ -8,11 +8,14 @@ public class ScreensInstaller : MonoInstaller
     private LoginView loginView;
     [SerializeField]
     private ConnectView connectView;
+    [SerializeField]
+    private TeamPikerView teamPikerView;
     
     public override void InstallBindings()
     {
-        BindLogin();
         BindInitialConnect();
+        BindLogin();
+        BindTeamPiker();
     }
     private void BindLogin()
     {
@@ -25,6 +28,11 @@ public class ScreensInstaller : MonoInstaller
     {
         Container.Bind<ConnectView>().FromInstance(connectView).AsSingle();
         Container.Bind<ConnectPresenter>().AsSingle().NonLazy();
+    }
+    private void BindTeamPiker()
+    {
+        Container.Bind<TeamPikerView>().FromInstance(teamPikerView).AsSingle();
+        Container.Bind<TeamPikerPresenter>().AsSingle().NonLazy();
     }
 
     

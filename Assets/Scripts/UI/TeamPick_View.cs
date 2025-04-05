@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Photon.Pun;
 using Photon.Realtime;
 using UnityEngine.UI;
@@ -16,6 +15,15 @@ public class TeamPick_View : MonoBehaviourPun
 
     [SerializeField]
     TextMeshProUGUI WaitTeam;
+    
+    [SerializeField]
+    Button joinButtonTeamA;
+
+    [SerializeField]
+    Button joinButtonTeamB;
+
+    [SerializeField]
+    Button joinButtonWaitTeam;
 
     [SerializeField]
     LogInTeamManager teamManager;
@@ -45,7 +53,6 @@ public class TeamPick_View : MonoBehaviourPun
 
         return newString;
     }
-   
     void TeamWaitHandler()
     {
         photonView.RPC("TeamWaitUpdate",RpcTarget.All,PlayerListToString(teamManager.WaitTeam));

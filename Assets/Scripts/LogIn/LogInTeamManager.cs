@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿
 using System.Collections.Generic;
 using Photon.Pun;
 using UnityEngine.UI;
@@ -7,7 +7,7 @@ using System;
 using System.Threading.Tasks;
 using Photon.Realtime;
 using Hashtable = ExitGames.Client.Photon.Hashtable;
-using ExitGames.Client.Photon;
+
 
 public class LogInTeamManager : MonoBehaviourPunCallbacks
 {
@@ -15,7 +15,6 @@ public class LogInTeamManager : MonoBehaviourPunCallbacks
     public event Action OnTeamBUpdate= delegate { };
     public event Action OnTeamWaitUpdate= delegate { };
     public event Action<Player> OnPlayerJoin = delegate { };
-
 
 
     public List<Player> TeamA;
@@ -41,7 +40,6 @@ public class LogInTeamManager : MonoBehaviourPunCallbacks
     void Start()
     {
         startButton.interactable = false;
-
 
         TeamA = new List<Player>();
         TeamB = new List<Player>();
@@ -200,12 +198,9 @@ public class LogInTeamManager : MonoBehaviourPunCallbacks
     public void StartGameButton()
     {
 
-
         PlayersToSetTeam = new List<Player>();
         PlayersToSetTeam.AddRange(TeamA);
         PlayersToSetTeam.AddRange(TeamB);
-
-
 
             //Set Team A for all TeamA  Players//
             foreach (var player in TeamA)
@@ -228,9 +223,7 @@ public class LogInTeamManager : MonoBehaviourPunCallbacks
             startButton.interactable = false;
             WaitingSetUpToStartGame();
 
-
     }
-
     async void WaitingSetUpToStartGame()
     {
         while(!_setPropertiesCompleted)

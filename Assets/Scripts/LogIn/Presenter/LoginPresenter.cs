@@ -10,12 +10,14 @@ public class LoginPresenter
     
      
     private ILoginService _loginService;
+    private Navigator _navigator;
 
-    public LoginPresenter(LoginView loginView, LoginModel loginModel, ILoginService loginService)
+    public LoginPresenter(LoginView loginView, LoginModel loginModel, ILoginService loginService, Navigator navigator)
     {
         _loginView = loginView;
         _loginModel = loginModel;
         _loginService = loginService;
+        _navigator = navigator;
 
 
         _loginView.OnConnectButtonClicked += ConnectToRoom;
@@ -25,6 +27,7 @@ public class LoginPresenter
     private void ConnectToRoom()
     {
         _loginView.DisableConnectButton();
+        PhotonNetwork.NickName = _loginView.GetNickName();
         _loginService.ConnectToDefaultRoom().ContinueWith(OnLoginResponse);
     }
     private void OnLoginResponse(LoginResponse response)
@@ -46,7 +49,6 @@ public class LoginPresenter
     {
         //TODO:Move out of here, implement a non generic nickname and
         // use the navigator instead of a change of scene
-        PhotonNetwork.LocalPlayer.NickName = "Generic";
-        PhotonNetwork.LoadLevel("TeamsScene");
+        _navigator.OpenScreen("Teampiker");
     }
 }
